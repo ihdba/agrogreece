@@ -1,0 +1,42 @@
+{% extends "portal/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="page__container">
+
+            <a href="{% url "products:add_producer" %}">
+                <button>
+                    Add Producer
+                </button>
+            </a>
+                
+            <h2 class="section__title">Παραγωγοι, Οικοτεχνειες, Συνεταιρεισμοι, Συλλογοι.</h2>
+            <h3>Οπου το μερακι συναντα την παραδοση.</h3>
+
+            <div class="cards">
+                {% for producer in producers %}
+                    <div class="card">
+                        <h3 class="card_title"> {{ producer.name }}</h3>
+                    <p class_"card_info">Περιοχη: {{ producer.region }}</p>
+                    <p class_"card_info">Επαφη: {{ producer.contact }}</p>
+                    <p class_"card_info_date txt-blue-400">Συνδεθηκε: {{ producer.registered|date:'d-m-Y' }}</p>
+                    <p class="item_image">
+                        <img src=" {% get_media_prefix %}{{ producer.image }}" alt="{{ producer.name }}">
+                    </p>
+                    <a href="{% url "products:producer_detail" producer.id %}">Περισσοτερες πληροφοριες...</a>
+                    </div>
+                {% endfor %}
+            </div>
+
+               
+</div>
+
+                    
+              
+           
+         
+
+{% endblock content %}
+
+

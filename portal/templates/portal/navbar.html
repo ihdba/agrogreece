@@ -1,0 +1,37 @@
+{% load static %}
+
+
+<nav class="navbar">
+    <div class="logo">
+        <img class="logo_img" src="{% static "/assets/graphics/olives-trsp.webp" %}"  alt="">
+    </div>
+
+    <div class="nav_items">
+
+        <a href="{% url 'portal:index' %}">Κεντρικη</a>
+        <a class="link_item" href="{% url "products:index" %}">Προιοντα</a>
+        <a class="link_item" href="{% url "portal:about" %}">Περι ..</a>
+        <a class="link_item" href="{% url "portal:contact" %}">Επαφη</a>
+        
+        
+
+        {% comment %} {% if user.is_authenticated %}
+            <a class="link_item" href="{% url 'products:index' %}">Producers</a>
+            <span>
+                <i class='bx bx-user'></i>{{ user }}
+                <form  class="logout" action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">Logout</button>
+                </form>
+            </span>
+        {% else %}
+            <span class="loging">
+                <a href="{% url "login" %}">Log In</a>
+            </span>
+
+        {% endif %} {% endcomment %}
+
+
+    </div>
+
+</nav>

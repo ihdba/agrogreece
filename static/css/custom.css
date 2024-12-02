@@ -1,0 +1,271 @@
+
+/* crimson-text-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Crimson Text';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/crimson-text-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* crimson-text-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Crimson Text';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/crimson-text-v19-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+
+
+:root {
+
+   --sec-bg-pale: #CFECEC; 
+   --bg-light-teal: #B3D9D9;
+   --sec-bg-teal-green: #00827F;
+   --teal-blue: #007C80;
+   --medium-teal:#045F5F;
+   --sec-text-dark-teal: #045D5D;
+   --text-deep-teal: #033E3E;
+   --gunmetal: #2C3539;
+   --btn-text-color: #F5F5F5;
+   --olive: #808000;
+   --crimson-red: #990000;
+   --sandstone: #786D5F;
+
+
+
+}
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+
+html, body {
+    color: var(--text-deep-teal);
+    font-size: var(--main-fsize);
+    font-family: 'Crimson Text', sans-serif;
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+    font-weight: 400;
+    font-style: normal; 
+    background-color: var(--bg-light-teal);
+    
+}
+
+
+
+.btn {
+    
+    height: 1.5rem;
+    background-color: var(--medium-teal); 
+    color:var(--btn-text-color);
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    
+}
+
+
+li{
+    list-style: none;
+}
+
+
+a {
+    text-decoration: none;
+    color:var(--crimson-red);
+    font-size: 1rem;
+    transition: all 0.5s;
+}
+
+a:hover {
+
+    font-size: 1.1rem;
+}
+
+
+/* .container {
+    /* height: 100vh; */
+    
+} */
+
+.header {
+    background-color: var(--sec-bg-pale) ;
+    width: 100%;
+    height: 80px;
+    
+}
+
+
+.logo_img {
+    width: 100px;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_items a {
+    margin-right: 2em;
+}
+
+
+
+section {
+    
+    padding: 1rem;
+}
+
+/* HERO */
+
+
+.hero {
+    text-align: center;
+    
+    /* background-image: url('../assets/img/olive-harvest.jpg'); */
+    color: var(--text-deep-teal);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #DADBDD;
+    
+}
+
+.intro_img {
+
+    margin: 2rem;
+}
+
+.intro_img_btn {
+    width: 100%;
+}
+
+.headline {
+
+  
+}
+
+.subheadline {
+    color: var(--olive);
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+section {
+    border-bottom: 1px solid #DADBDD;
+}
+
+.benefits {
+    color: var(--crimson-red);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+   
+}
+ 
+.benefit_item {
+    border: 1px solid var(--sec-bg-pale);
+    padding: 1rem;
+}
+
+.benefits h3 {
+    margin-bottom: 1rem;
+}
+
+.benefits p {
+    font-size: 1.1rem;
+}
+
+.intro_img {
+
+
+}
+
+/*  CONTAINER FOR PAGES */
+
+.page__container {
+    padding: 2rem;
+}
+
+/*  from deligreece */
+
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    border-radius: 15px;
+    width: 300px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em;
+    padding: 0.2rem;
+    box-shadow: 0px 7px 4px 1px rgba(0,0,0,0.55);
+
+    /* -webkit-box-shadow: 10px 10px 5px -6px rgba(158,142,158,1);
+    -moz-box-shadow: 10px 10px 5px -6px rgba(158,142,158,1);
+    box-shadow: 10px 10px 5px -6px rgba(158,142,158,1); */
+}
+
+.card_title {
+    color: #990000;
+}
+
+.card_info {
+
+    margin-top: 1rem;
+    color:#990000;
+}
+
+.card_info_date {
+    font-size: 0.5rem;
+}
+
+.item_image {
+    width: 250px;
+    margin-top: 1em;
+}
+
+.item_image img {
+    object-fit: cover;
+    max-height: 200px;
+    width: 250px;
+}
+
+.cart_btn {
+    width: 60px;
+}
+
+.txt-blue-400 {
+    color: blue;
+    font-weight: 400;
+}

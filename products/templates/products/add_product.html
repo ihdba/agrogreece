@@ -1,0 +1,20 @@
+{% extends 'portal/base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <h1>Add Product</h1>
+
+    <form method = "post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"class="btn btn-outline-primary">Upload</button>
+    </form>
+
+    <a type="button" href="{% url 'products:index'  %}">
+        <i class='bx bx-bowl-hot'></i>
+        Back to  Products</a>
+    <br>
+
+    
+{% endblock content %}
