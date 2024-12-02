@@ -1,9 +1,12 @@
 from django.shortcuts import render, redirect, get_list_or_404
 
+from django.contrib.postgres.search import SearchVector
 
 
 from .models import Product, Producer
 from .forms import ProductForm, ProducerForm
+
+from .forms import SearchForm
 
 
 
@@ -138,3 +141,20 @@ def add_product(request):
         form = ProductForm()
 
     return render(request,'products/add_product.html', {'form': form})
+
+
+def product_search(request):
+    
+    form = SearchForm()
+    query = None
+    results = []
+    
+    
+    if 'query' in request.GET:
+        form = SearchForm(request.GET)
+        if form.is_valid():
+            query = form.cleaned_data['query']
+            results = (
+                Product.objects.annotate(search=SearchVector('p_name', 'producer'),).filter(search=query)
+            )
+    return render(request, 'products/search.html', {'form': form, 'query': query, 'results':results})

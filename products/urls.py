@@ -13,4 +13,5 @@ urlpatterns = [
     path('add_producer/', views.add_producer, name='add_producer'),
     path('producers/<int:id>/', views.producer_detail, name='producer_detail'),
     path('<int:id>/', views.product_detail, name='product_detail'),
+    path('search/', views.product_search, name='product_search'),
 ]

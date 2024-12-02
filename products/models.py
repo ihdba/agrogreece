@@ -1,4 +1,12 @@
+from django.conf import settings
 from django.db import models
+from django.urls import reverse
+from django.utils import timezone
+
+
+
+
+
 
 # Create your models here.
 class Producer(models.Model):
@@ -33,3 +41,8 @@ class Product(models.Model):
     class Meta:
         verbose_name_plural = "Products"
         ordering = ['-published']
+        
+        
+    def get_absolute_url(self):
+        return reverse("products:product_detail", args=[self.id])
+    

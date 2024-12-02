@@ -19,3 +19,7 @@ class ProductForm(forms.ModelForm):
         model = Product
         fields = '__all__'
 
+
+
+class SearchForm(forms.Form):
+    query = forms.CharField()
