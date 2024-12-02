@@ -47,6 +47,7 @@
                 <p class="item_image">
                     <img src=" {% get_media_prefix %}{{ product.p_img }}" alt="{{ product.name }}">
                 </p>
+                <a href="{% url "products:product_detail" product.id %}">Περισσοτερες πληροφοριες...</a>
                 <button class="cart_btn">
                     <i class='bx bx-cart-add'></i>
                 </button>

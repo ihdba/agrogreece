@@ -16,7 +16,7 @@
 
    
     <h4>
-        Μπορειτε να ερχθετε σε επαφη  με τους ακολουθους τροπους:{{ producer.contact }}
+        Μπορειτε να ερθετε σε επαφη  με τους ακολουθους τροπους:{{ producer.contact }}
     </h4> 
 
     <h4>
@@ -41,6 +41,7 @@
                     <p class="item_image">
                         <img src=" {% get_media_prefix %}{{ product.p_img }}" alt="{{ product.name }}">
                     </p>
+                    <a href="{% url "products:product_detail" product.id %}">Περισσοτερες πληροφοριες...</a>
                 </div>
             {% endfor %}
         </div>

@@ -107,6 +107,21 @@ def products(request):
     
     return render(request, 'products/products.html', context = context)
 
+
+def product_detail(request, id):
+    
+    product = Product.objects.get(id=id)
+    
+    title = 'Λεπτομεριες Προιοντος'
+    
+    ctx = {
+        'title': title,
+        'product': product,
+    }
+    
+    return render(request, 'products/product_detail.html', ctx )
+
+
  
 def add_product(request):
     
