@@ -15,29 +15,31 @@
 
 
 <section class="products">
-    <h2 class="section__title">Products we are proud of.</h2>
-    <a href="{% url "products:add_product" %}">
+    <h2 class="section__title">Τα προιοντα του τοπου μας.</h2>
+    {% comment %} <a href="{% url "products:add_product" %}">
         <button class="link_btn">
             Add Product
         </button>
-    </a>
+    </a> {% endcomment %}
 
   
 <div class="page__container">
 
-    <a href="{% url "products:add_product" %}">
+    {% comment %} <a href="{% url "products:add_product" %}">
         <button>
             Add Producer
         </button>
-    </a>
+    </a> {% endcomment %}
         
     <h2 class="section__title">Επιλεξτε τα προιοντα.</h2>
     <h3>Οπου το μερακι συναντα την παραδοση.</h3>
 
+    <hr>
+
     <div class="cards">
         {% for product in products %}
             <div class="card">
-                <h3 class="card_title">Προιον:: {{ product.p_name }}</h3>
+                <h3 class="card_title">Προιον: {{ product.p_name }}</h3>
                 <h3 class="card_title">Ο παραγωγος: {{ product.producer }}</h3>
                 <p class_"card_info">Περιγραφη: {{ product.p_desc }}</p>
                 <p class_"card_info">Τιμη: €{{ product.price }}</p>

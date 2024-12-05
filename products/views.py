@@ -158,3 +158,9 @@ def product_search(request):
                 Product.objects.annotate(search=SearchVector('p_name', 'producer'),).filter(search=query)
             )
     return render(request, 'products/search.html', {'form': form, 'query': query, 'results':results})
+
+
+
+def producer_signup(request):
+    
+    return render(request, 'products/producer_signup.html')

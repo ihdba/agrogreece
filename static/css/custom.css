@@ -53,14 +53,17 @@ html, body {
     font-size: var(--main-fsize);
     font-family: 'Crimson Text', sans-serif;
     font-size: 1rem;
-    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+    /* font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem); */
     font-weight: 400;
     font-style: normal; 
-    background-color: var(--bg-light-teal);
+   
     
 }
 
-
+.container {
+    margin: auto;
+    background-color: var(--bg-light-teal);
+}
 
 .btn {
     
@@ -91,11 +94,6 @@ a:hover {
     font-size: 1.1rem;
 }
 
-
-/* .container {
-    /* height: 100vh; */
-    
-} */
 
 .header {
     background-color: var(--sec-bg-pale) ;
@@ -147,17 +145,11 @@ section {
 }
 
 .intro_img {
-
     margin: 2rem;
 }
 
 .intro_img_btn {
     width: 100%;
-}
-
-.headline {
-
-  
 }
 
 .subheadline {
@@ -178,7 +170,7 @@ section {
 .benefits {
     color: var(--crimson-red);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     padding: 2rem;
    
@@ -197,10 +189,30 @@ section {
     font-size: 1.1rem;
 }
 
-.intro_img {
+.visitors {
+    color: #2C3539;
+    font-size: 1.1rem;
+}
 
+
+hr {
+    
+    height: 4px;
+    margin: 0.5rem auto ;
+    width: 50%;
+    color: var(--medium-teal);
 
 }
+.visitors h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    
+}
+
+.visitors p {
+    line-height: 150%;
+}
+
 
 /*  CONTAINER FOR PAGES */
 
@@ -229,7 +241,7 @@ section {
     align-items: center;
     margin: 1em;
     padding: 0.2rem;
-    box-shadow: 0px 7px 4px 1px rgba(0,0,0,0.55);
+    box-shadow: 0px 4px 4px 1px rgba(0,0,0,0.55);
 
     /* -webkit-box-shadow: 10px 10px 5px -6px rgba(158,142,158,1);
     -moz-box-shadow: 10px 10px 5px -6px rgba(158,142,158,1);
@@ -241,7 +253,7 @@ section {
 }
 
 .card_info {
-
+    font-size: 0.7rem;
     margin-top: 1rem;
     color:#990000;
 }

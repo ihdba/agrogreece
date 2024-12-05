@@ -13,6 +13,16 @@
                 
             <h2 class="section__title">Παραγωγοι, Οικοτεχνειες, Συνεταιρεισμοι, Συλλογοι.</h2>
             <h3>Οπου το μερακι συναντα την παραδοση.</h3>
+            
+            <p>Εγγραφη στους παραγωγους. 
+                <a href="{% url "products:producer_signup" %}">
+                    <button>
+                        Sign in
+                    </button>
+                </a>
+            </p>
+
+            <hr>
 
             <div class="cards">
                 {% for producer in producers %}
